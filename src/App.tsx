@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "./Header";
-import { Wysi } from "./lib";
+import { EditorArea, Wysi } from "./lib";
 import controllers from "./lib/components/Wysi/defaultControllers";
 
 function App() {
@@ -12,9 +12,8 @@ function App() {
 
       <div>
         <Wysi>
-          <div>
-            <Header />
-          </div>
+          <Header />
+          <EditorArea />
         </Wysi>
       </div>
     </div>
