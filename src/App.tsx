@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
+import Header from "./Header";
 import { Wysi } from "./lib";
+import controllers from "./lib/components/Wysi/defaultControllers";
 
 function App() {
   return (
@@ -9,7 +11,11 @@ function App() {
       <h3>Lets go hacking!</h3>
 
       <div>
-        <Wysi>Teste</Wysi>
+        <Wysi>
+          <div>
+            <Header />
+          </div>
+        </Wysi>
       </div>
     </div>
   );
