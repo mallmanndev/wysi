@@ -1,20 +1,14 @@
 import React, { useEffect } from "react";
 import useController from "./lib/useController";
+import BoldButton from './lib/components/Buttons/BoldButton'
 
-const Header = () => {
-  const [bold, setBold] = useController("bold");
+const Header = (props:any) :JSX.Element => {
+  // Default buttons if users don't pass into Header Component
+  const defaultButtons = [
+    <BoldButton key='negrito' label="negrito"  ></BoldButton>
+  ]
 
-  useEffect(() => {
-    console.log(bold);
-  }, [bold]);
-
-  return (
-    <div>
-      <button onClick={() => setBold(!bold)}>negrito</button>
-      <button>italico</button>
-      <button>sublinhado</button>
-    </div>
-  );
+return <>{props.children || defaultButtons}</>
 };
 
 export default Header;
