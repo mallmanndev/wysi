@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import Header from "./Header";
+import Button  from './lib/components/Button'
+import BoldButton from './lib/components/Buttons/BoldButton'
 import { EditorArea, Wysi } from "./lib";
 import controllers from "./lib/components/Wysi/defaultControllers";
 
@@ -12,7 +14,12 @@ function App() {
 
       <div>
         <Wysi>
-          <Header />
+          <Header>
+              <BoldButton label='Negrito' title='Negrito'  />
+              {/* Custom buttons */}
+              <Button label='Itálico' onClick={()=>console.log("This is a custom action")} />
+              <Button label='Sublinhado' />
+          </Header>
           <EditorArea />
         </Wysi>
       </div>

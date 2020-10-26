@@ -1,0 +1,9 @@
+.editor-button {
+    background: rgba(0, 0, 0, 0.068);
+    border: 1px solid var(--light-border);
+    padding: var(--padding);
+    cursor: pointer;
+}
+.editor-button:hover {
+    background: rgba(0, 0, 0, 0);
+}
